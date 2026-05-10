@@ -7,10 +7,10 @@ export default function ProductsGrid() {
 
   return (
     <motion.section
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
       aria-labelledby="products-heading"
       className="products"
     >

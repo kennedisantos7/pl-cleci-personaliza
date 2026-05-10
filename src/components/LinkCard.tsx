@@ -10,9 +10,14 @@ interface LinkCardProps {
 export default function LinkCard({ item, index }: LinkCardProps) {
   return (
     <motion.a
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.1 + index * 0.1, duration: 0.5 }}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ 
+        delay: index * 0.05, 
+        duration: 1.2, 
+        ease: [0.22, 1, 0.36, 1] 
+      }}
       whileHover={{ y: -4, scale: 1.01 }}
       whileTap={{ scale: 0.98 }}
       href={item.href}

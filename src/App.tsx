@@ -22,19 +22,14 @@ export default function App() {
         <Hero />
 
         {/* ── Links de produtos / catálogos ────────────────────────────── */}
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          aria-label="Catálogos de produtos"
-          className="links-grid"
-        >
+        {/* A seção NÃO anima — só o conteúdo interno anima, evitando o fundo branco */}
+        <section aria-label="Catálogos de produtos" className="links-grid">
           <div className="links-grid__content">
             {LINKS.map((item, index) => (
               <LinkCard key={item.id} item={item} index={index} />
             ))}
           </div>
-        </motion.section>
+        </section>
 
 
 

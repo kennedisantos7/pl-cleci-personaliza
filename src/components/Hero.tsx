@@ -4,13 +4,14 @@ import { BRAND } from '../data/links';
 
 export default function Hero() {
   return (
-    <motion.header
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="hero"
-    >
-      <div className="section-container">
+    // O <header> NÃO anima — só o conteúdo interno anima, evitando fundo vazar
+    <header className="hero">
+      <motion.div
+        className="section-container"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+      >
         {/* Logo */}
         <div className="hero__avatar" aria-hidden="true">
           <a href="https://www.cleci.com.br/" target="_blank" rel="noopener noreferrer">
@@ -23,10 +24,6 @@ export default function Hero() {
           Conheça Nossos Produtos e Faça seu Orçamento
         </p>
 
-
-
-
-
         {/* Indicador de scroll animado */}
         <motion.div
           animate={{ y: [0, 10, 0] }}
@@ -36,7 +33,7 @@ export default function Hero() {
         >
           <ChevronDown className="hero__chevron" />
         </motion.div>
-      </div>
-    </motion.header>
+      </motion.div>
+    </header>
   );
 }
