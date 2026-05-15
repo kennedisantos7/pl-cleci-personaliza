@@ -65,14 +65,14 @@ export const LINKS: LinkItem[] = [
     href: 'https://cleci.com.br/grafica',
     external: true,
   },
-  {
+/*  {
     id: 'afiliados',
     title: 'Afiliados',
     subtitle: 'Seja um afiliado',
     image: 'https://i.imgur.com/yhJP3VN.png',
     href: 'https://imgur.com/yhJP3VN',
     external: true,
-  },
+  },*/
   {
     id: 'whatsapp-direct',
     title: 'WhatsApp',
